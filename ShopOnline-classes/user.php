@@ -40,7 +40,7 @@ class User {
   }
   public function getFinalPrice($_price){
     $finalPrice= $_price - (($_price * $this->discount) / 100);
-    return number_format($finalPrice, 2, ",", "");
+    return number_format($finalPrice, 2, ",", "")." €";
   }
 
 }

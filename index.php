@@ -9,7 +9,11 @@ $new_user->setDiscount(15);
 
 $new_premiumUser = new PremiumUser("luca","verdi",85,"hai vinto un buono regalo!!!");
 
-$new_product = new Product("martello","utensile","15€");
+$new_product = new Product("martello","utensile",15);
+$new_product->setRecycled(true) ;
+$new_product->setMaterials("legno , ferro") ;
+
+
 
 
 ?>
@@ -31,6 +35,8 @@ $new_product = new Product("martello","utensile","15€");
   <h3> costo oggetto--> <?php echo $new_product->getCost()  ?></h3>
   <h3> tipologia oggetto--> <?php echo $new_product->getType()  ?></h3>
   <h3> prezzo finale oggetto--> <?php echo $new_user->getFinalPrice($new_product->getCost())  ?></h3>
+  <h3> reciclato--> <?php echo $new_product->isRecycled() ?></h3>
+  <h3> materiali--> <?php echo $new_product->getMaterials() ?></h3>
 
 
 
@@ -44,6 +50,8 @@ $new_product = new Product("martello","utensile","15€");
   <h3> costo oggetto--> <?php echo $new_product->getCost()  ?></h3>
   <h3> tipologia oggetto--> <?php echo $new_product->getType()  ?></h3>
   <h3> prezzo finale oggetto--> <?php echo $new_premiumUser->getFinalPrice($new_product->getCost())  ?></h3>
+  <h3> reciclato--> <?php echo $new_product->isRecycled() ?></h3>
+  <h3> materiali--> <?php echo $new_product->getMaterials() ?></h3>
 
 </body>
 </html>
